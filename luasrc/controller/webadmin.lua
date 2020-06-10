@@ -8,8 +8,10 @@ function index()
 		return
 	end
 
-	entry({"admin", "custom"}, firstchild(), "我的", 89).dependent = false
-	entry({"admin", "custom", "webadmin"}, cbi("webadmin"), _("Web Admin"), 20).dependent = true
+	local page
+
+	page = entry({"admin", "system", "webadmin"}, cbi("webadmin"), _("Web Admin"), 1)
+	page.leaf = true
 
 end
 
